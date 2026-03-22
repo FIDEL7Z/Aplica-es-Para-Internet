@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Jefferson Coqueijo Fidelis</title>
+    <link rel="stylesheet" href="style/styles.css">
+   
 </head>
 
 <body>
@@ -14,41 +16,191 @@
         <p>Software Developer</p>
     </header>
 
-    <nav>
-        <h2>Menu</h2>
+    <nav aria-label="Navegação principal">
         <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="https://portfolio-swart-omega-50.vercel.app/">Meu Portfolio</a></li>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#midias">Mídias</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="https://portfolio-swart-omega-50.vercel.app/" target="_blank" rel="noopener noreferrer">Meu Portfólio</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="inicio">
 
-        <section>
+        <section id="sobre">
             <h2>Sobre mim</h2>
 
             <article>
                 <h3>Quem sou eu</h3>
                 <p>
-                    Desenvolvedor com 4 anos de experiência na área de tecnologia, atuando na construção de sistemas escaláveis, e aplicações web de ponta a ponta. Experiência prática com Python, Node.js, Java, React e Angular, além de integração de serviços e arquitetura de soluções orientadas a dados.
+                    Desenvolvedor com 4 anos de experiência na área de tecnologia, atuando na construção de sistemas
+                    escaláveis e aplicações web de ponta a ponta. Experiência prática com Python, Node.js, Java, React
+                    e Angular, além de integração de serviços e arquitetura de soluções orientadas a dados.
                 </p>
             </article>
 
             <article>
                 <h3>Meus objetivos</h3>
                 <p>
-                    Atuação consistente em projetos com Inteligência Artificial, incluindo aplicações com LLMs, RAG e visão computacional, sempre conectando tecnologia a problemas reais de negócio.
+                    Atuação consistente em projetos com Inteligência Artificial, incluindo aplicações com LLMs, RAG e
+                    visão computacional, sempre conectando tecnologia a problemas reais de negócio.
                 </p>
             </article>
-
         </section>
 
         <aside>
             <h2>Informação extra</h2>
             <p>
-               Essa Pagina é pra aula de para Aplicações Para Internet.
+                Esta página foi criada para a disciplina de Aplicações para Internet.
             </p>
         </aside>
+
+        <section id="midias">
+            <h2>Steroid Manager</h2>
+
+            <figure>
+                <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/103468557/567363832-1a2eb5b3-f2b9-4617-880b-ebb6c87a023f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260322T024148Z&X-Amz-Expires=300&X-Amz-Signature=57ea985e418c3ec6338b1f11062d06a738a154f47679658f885ff54e4e17924d&X-Amz-SignedHeaders=host"
+                    alt="Imagem ilustrativa sobre tecnologia e desenvolvimento web">
+                <figcaption>Imagem da apliação.</figcaption>
+            </figure>
+
+            <h3>Audio explicando sobre o Steroid_Manager</h3>
+            <audio controls>
+                <source src="audio/Esse.m4a" type="audio/mp4">
+               
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+
+            <h3>Vídeo do Steroid_Manager</h3>
+            <iframe
+                src="https://www.youtube.com/embed/2qAwMleOou0"
+                title="Vídeo incorporado"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+       <section id="contato">
+    <h2>Formulário de contato</h2>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <label for="nome">Nome completo:</label>
+ <input
+  type="text"
+  id="nome"
+  name="nome"
+  required
+  minlength="3"
+  maxlength="100"
+  pattern="^[A-Za-zÀ-ÿ]+(?: [A-Za-zÀ-ÿ]+)+$"
+  placeholder="Digite seu nome completo">
+
+
+            <label for="email">E-mail:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Digite seu e-mail">
+
+            <label for="telefone">Telefone:</label>
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                placeholder="(83) 99999-9999"
+                pattern="\([0-9]{2}\)\s[0-9]{4,5}-[0-9]{4}"
+                title="Digite no formato (83) 99999-9999">
+
+            <label for="nascimento">Data de nascimento:</label>
+            <input
+                type="date"
+                id="nascimento"
+                name="nascimento"
+                required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações profissionais</legend>
+
+            <label for="area">Área de interesse:</label>
+            <select id="area" name="area" required>
+                <option value="">Selecione</option>
+                <option value="frontend">Front-end</option>
+                <option value="backend">Back-end</option>
+                <option value="fullstack">Full Stack</option>
+                <option value="dados">Dados e IA</option>
+            </select>
+
+            <label for="nivel">Nível de experiência (0 a 10):</label>
+            <input
+                type="range"
+                id="nivel"
+                name="nivel"
+                min="0"
+                max="10"
+                value="5">
+
+            <label for="site">Portfólio ou site:</label>
+            <input
+                type="url"
+                id="site"
+                name="site"
+                placeholder="https://seusite.com">
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                required
+                minlength="10"
+                maxlength="500"
+                placeholder="Digite sua mensagem"></textarea>
+
+            <p><strong>Preferência de contato:</strong></p>
+
+            <div class="inline-option">
+                <input
+                    type="radio"
+                    id="contato-email"
+                    name="preferencia_contato"
+                    value="email"
+                    required>
+                <label for="contato-email">E-mail</label>
+            </div>
+
+            <div class="inline-option">
+                <input
+                    type="radio"
+                    id="contato-telefone"
+                    name="preferencia_contato"
+                    value="telefone">
+                <label for="contato-telefone">Telefone</label>
+            </div>
+        </fieldset>
+
+        <div class="inline-option">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Li e aceito os termos.</label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+</section>
 
     </main>
 
