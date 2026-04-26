@@ -1,214 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Jefferson Coqueijo Fidelis</title>
-    <link rel="stylesheet" href="style/styles.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio – Jefferson & Hugo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Atividades/Atividade-02/src/style/styles.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Jefferson Coqueijo Fidelis</h1>
-        <p>Software Developer</p>
-    </header>
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-label">Aplicações para Internet — 2026</div>
+    <h1>
+      <span class="jeff">Jefferson</span> &<br>
+      <span class="hugo">Hugo</span>
+    </h1>
+    <p>Desenvolvedores apaixonados por tecnologia, dados e construção de produtos digitais.</p>
+  </div>
 
-    <nav aria-label="Navegação principal">
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#midias">Mídias</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="https://portfolio-swart-omega-50.vercel.app/" target="_blank" rel="noopener noreferrer">Meu Portfólio</a></li>
-        </ul>
-    </nav>
+  <!-- ── NAV ── -->
+  <nav aria-label="Navegação principal">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-    <main id="inicio">
+  <!-- ── SOBRE ── -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-tag shared">01 — Quem somos</div>
+      <div class="section-title">Sobre a dupla</div>
 
-        <section id="sobre">
-            <h2>Sobre mim</h2>
+      <div class="profiles-grid">
 
-            <article>
-                <h3>Quem sou eu</h3>
-                <p>
-                    Desenvolvedor com 4 anos de experiência na área de tecnologia, atuando na construção de sistemas
-                    escaláveis e aplicações web de ponta a ponta. Experiência prática com Python, Node.js, Java, React
-                    e Angular, além de integração de serviços e arquitetura de soluções orientadas a dados.
-                </p>
-            </article>
+        <!-- Jefferson -->
+        <div class="profile-card jeff">
+          <div class="photo-slot" title="Clique para adicionar foto">
+            <img id="foto-jeff" src="" alt="Foto de Jefferson" style="display:none;">
+            <div class="photo-placeholder" id="placeholder-jeff">Adicionar<br>foto</div>
+            <input type="file" accept="image/*" onchange="loadPhoto(this,'foto-jeff','placeholder-jeff')">
+          </div>
+          <div class="profile-name">Jefferson Coqueijo Fidelis</div>
+          <div class="profile-role">Dados & Inteligência Artificial</div>
+          <p class="profile-bio">
+            Desenvolvedor com 4 anos de experiência na área de tecnologia, atuando na construção de sistemas escaláveis e aplicações web de ponta a ponta. Experiência prática com Python, Node.js, Java, React e Angular, além de integração de serviços e arquitetura orientada a dados.
+          </p>
+          <p class="profile-bio" style="margin-top:10px;">
+            Atua consistentemente em projetos com Inteligência Artificial, incluindo aplicações com LLMs, RAG e visão computacional — sempre conectando tecnologia a problemas reais de negócio.
+          </p>
+          <div class="skills-list jeff">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">LLMs / RAG</span>
+            <span class="skill-tag">Visão Computacional</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Dados & IA</span>
+          </div>
+        </div>
 
-            <article>
-                <h3>Meus objetivos</h3>
-                <p>
-                    Atuação consistente em projetos com Inteligência Artificial, incluindo aplicações com LLMs, RAG e
-                    visão computacional, sempre conectando tecnologia a problemas reais de negócio.
-                </p>
-            </article>
-        </section>
+        <!-- Hugo -->
+        <div class="profile-card hugo">
+          <div class="photo-slot" title="Clique para adicionar foto">
+            <img id="foto-hugo" src="" alt="Foto de Hugo" style="display:none;">
+            <div class="photo-placeholder" id="placeholder-hugo">Adicionar<br>foto</div>
+            <input type="file" accept="image/*" onchange="loadPhoto(this,'foto-hugo','placeholder-hugo')">
+          </div>
+          <div class="profile-name">Hugo Henrrique de Vieira Almeida</div>
+          <div class="profile-role">Desenvolvimento de Software</div>
+          <p class="profile-bio">
+            Desenvolvedor com foco em construção de aplicações web modernas e escaláveis. Apaixonado por boas práticas de engenharia, performance e experiência do usuário — do back-end à interface final.
+          </p>
+          <p class="profile-bio" style="margin-top:10px;">
+            <em style="color: rgba(255,255,255,0.35); font-size:0.85rem;">✏️ Edite este texto com sua descrição pessoal e objetivos profissionais.</em>
+          </p>
+          <div class="skills-list hugo">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">APIs REST</span>
+            <span class="skill-tag">UI / UX</span>
+          </div>
+        </div>
 
-        <aside>
-            <h2>Informação extra</h2>
-            <p>
-                Esta página foi criada para a disciplina de Aplicações para Internet.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIÊNCIA ── -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-tag shared">02 — Trajetória</div>
+      <div class="section-title">Experiência profissional</div>
+
+      <div class="experience-columns">
+
+        <!-- Jefferson -->
+        <div class="jeff-col">
+          <div class="exp-column-header jeff">Jefferson</div>
+
+          <div class="exp-item">
+            <div class="exp-date">2024 — Presente</div>
+            <div class="exp-title">Desenvolvedor Full Stack</div>
+            <div class="exp-company">✏️ Nome da empresa</div>
+            <div class="exp-desc">Construção de sistemas escaláveis e aplicações web de ponta a ponta com Python, Node.js e React. Integração de serviços e arquitetura orientada a dados.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">2022 — 2024</div>
+            <div class="exp-title">Desenvolvedor de IA / ML</div>
+            <div class="exp-company">✏️ Nome da empresa</div>
+            <div class="exp-desc">Atuação em projetos com Inteligência Artificial: LLMs, RAG (Retrieval-Augmented Generation) e visão computacional aplicados a problemas reais de negócio.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">2020 — 2022</div>
+            <div class="exp-title">Desenvolvedor Back-end</div>
+            <div class="exp-company">✏️ Nome da empresa</div>
+            <div class="exp-desc">Desenvolvimento de APIs e serviços com Java e Node.js. Integração com bancos de dados relacionais e arquitetura de microsserviços.</div>
+          </div>
+        </div>
+
+        <!-- Hugo -->
+        <div class="hugo-col">
+          <div class="exp-column-header hugo">Hugo</div>
+
+          <div class="exp-item">
+            <div class="exp-date">✏️ Ano — Presente</div>
+            <div class="exp-title">✏️ Cargo / Função</div>
+            <div class="exp-company">✏️ Nome da empresa</div>
+            <div class="exp-desc">✏️ Descreva suas responsabilidades, tecnologias utilizadas e principais resultados alcançados nesta posição.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">✏️ Ano — Ano</div>
+            <div class="exp-title">✏️ Cargo / Função</div>
+            <div class="exp-company">✏️ Nome da empresa</div>
+            <div class="exp-desc">✏️ Descreva suas responsabilidades, tecnologias utilizadas e principais resultados alcançados nesta posição.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-date">✏️ Ano — Ano</div>
+            <div class="exp-title">✏️ Cargo / Estágio</div>
+            <div class="exp-company">✏️ Nome da empresa / Instituição</div>
+            <div class="exp-desc">✏️ Descreva as atividades realizadas e aprendizados obtidos nesta experiência.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ── -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-tag shared">03 — Trabalhos</div>
+      <div class="section-title">Projetos em destaque</div>
+
+      <div class="projects-shared">
+
+        <!-- Steroid Manager (Jefferson) -->
+        <div class="project-card">
+          <div>
+            <div class="project-label" style="color: var(--accent-jeff);">Jefferson · Dados & IA</div>
+            <div class="project-name">Steroid Manager</div>
+            <p class="project-desc">
+              Aplicação desenvolvida para gestão e monitoramento, combinando front-end moderno com integração de dados em tempo real. Projeto documentado com vídeo demonstrativo e áudio explicativo.
             </p>
-        </aside>
-
-        <section id="midias">
-            <h2>Steroid Manager</h2>
-
-            <figure>
-                <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/103468557/567363832-1a2eb5b3-f2b9-4617-880b-ebb6c87a023f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260322T024148Z&X-Amz-Expires=300&X-Amz-Signature=57ea985e418c3ec6338b1f11062d06a738a154f47679658f885ff54e4e17924d&X-Amz-SignedHeaders=host"
-                    alt="Imagem ilustrativa sobre tecnologia e desenvolvimento web">
-                <figcaption>Imagem da apliação.</figcaption>
-            </figure>
-
-            <h3>Audio explicando sobre o Steroid_Manager</h3>
-            <audio controls>
-                <source src="audio/Esse.m4a" type="audio/mp4">
-               
-                Seu navegador não suporta o elemento de áudio.
-            </audio>
-
-            <h3>Vídeo do Steroid_Manager</h3>
-            <iframe
-                src="https://www.youtube.com/embed/2qAwMleOou0"
-                title="Vídeo incorporado"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </section>
-
-       <section id="contato">
-    <h2>Formulário de contato</h2>
-
-    <form action="#" method="post">
-        <fieldset>
-            <legend>Dados pessoais</legend>
-
-            <label for="nome">Nome completo:</label>
- <input
-  type="text"
-  id="nome"
-  name="nome"
-  required
-  minlength="3"
-  maxlength="100"
-  pattern="^[A-Za-zÀ-ÿ]+(?: [A-Za-zÀ-ÿ]+)+$"
-  placeholder="Digite seu nome completo">
-
-
-            <label for="email">E-mail:</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Digite seu e-mail">
-
-            <label for="telefone">Telefone:</label>
-            <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                required
-                placeholder="(83) 99999-9999"
-                pattern="\([0-9]{2}\)\s[0-9]{4,5}-[0-9]{4}"
-                title="Digite no formato (83) 99999-9999">
-
-            <label for="nascimento">Data de nascimento:</label>
-            <input
-                type="date"
-                id="nascimento"
-                name="nascimento"
-                required>
-        </fieldset>
-
-        <fieldset>
-            <legend>Informações profissionais</legend>
-
-            <label for="area">Área de interesse:</label>
-            <select id="area" name="area" required>
-                <option value="">Selecione</option>
-                <option value="frontend">Front-end</option>
-                <option value="backend">Back-end</option>
-                <option value="fullstack">Full Stack</option>
-                <option value="dados">Dados e IA</option>
-            </select>
-
-            <label for="nivel">Nível de experiência (0 a 10):</label>
-            <input
-                type="range"
-                id="nivel"
-                name="nivel"
-                min="0"
-                max="10"
-                value="5">
-
-            <label for="site">Portfólio ou site:</label>
-            <input
-                type="url"
-                id="site"
-                name="site"
-                placeholder="https://seusite.com">
-        </fieldset>
-
-        <fieldset>
-            <legend>Mensagem</legend>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="5"
-                required
-                minlength="10"
-                maxlength="500"
-                placeholder="Digite sua mensagem"></textarea>
-
-            <p><strong>Preferência de contato:</strong></p>
-
-            <div class="inline-option">
-                <input
-                    type="radio"
-                    id="contato-email"
-                    name="preferencia_contato"
-                    value="email"
-                    required>
-                <label for="contato-email">E-mail</label>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">API</span>
+              <span class="project-tag">Dados</span>
             </div>
-
-            <div class="inline-option">
-                <input
-                    type="radio"
-                    id="contato-telefone"
-                    name="preferencia_contato"
-                    value="telefone">
-                <label for="contato-telefone">Telefone</label>
-            </div>
-        </fieldset>
-
-        <div class="inline-option">
-            <input type="checkbox" id="termos" name="termos" required>
-            <label for="termos">Li e aceito os termos.</label>
+          </div>
+          <a href="https://portfolio-swart-omega-50.vercel.app/" target="_blank" rel="noopener" class="project-link">
+            Ver portfólio ↗
+          </a>
         </div>
 
-        <div class="buttons">
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
+        <!-- Projeto Hugo -->
+        <div class="project-card">
+          <div>
+            <div class="project-label" style="color: var(--accent-hugo);">Hugo · Desenvolvimento Web</div>
+            <div class="project-name">✏️ Nome do Projeto</div>
+            <p class="project-desc">
+              ✏️ Descreva o projeto: o que ele faz, qual problema resolve, quais tecnologias foram utilizadas e qual foi o seu papel no desenvolvimento.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">✏️ Tech 1</span>
+              <span class="project-tag">✏️ Tech 2</span>
+              <span class="project-tag">✏️ Tech 3</span>
+            </div>
+          </div>
+          <a href="#" class="project-link">Ver projeto ↗</a>
         </div>
-    </form>
-</section>
 
-    </main>
+        <!-- Projeto colaborativo (disciplina) -->
+        <div class="project-card collab" style="border-color: rgba(255,255,255,0.1);">
+          <div>
+            <div class="project-label">Colaborativo · Aplicações para Internet</div>
+            <div class="project-name">Portfólio da Dupla</div>
+            <p class="project-desc">
+              Página web desenvolvida em dupla para a disciplina de Aplicações para Internet, aplicando HTML5 semântico, CSS responsivo com Flexbox e Grid, formulários validados e layout mobile-first conforme especificações do professor.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">Flexbox</span>
+              <span class="project-tag">CSS Grid</span>
+              <span class="project-tag">Responsivo</span>
+              <span class="project-tag">Mobile-First</span>
+            </div>
+          </div>
+        </div>
 
-    <footer>
-        <p>© 2026 - <strong>Jefferson Coqueijo Fidelis</strong></p>
-        <p>Página criada para aula de HTML5</p>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-tag shared">04 — Fale com a gente</div>
+      <div class="section-title">Contato</div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card jeff">
+          <div class="contact-name jeff">Jefferson Coqueijo Fidelis</div>
+          <div class="contact-item jeff">
+            <span class="contact-dot"></span>
+            <a href="https://portfolio-swart-omega-50.vercel.app/" target="_blank" rel="noopener">portfolio-swart-omega-50.vercel.app</a>
+          </div>
+          <div class="contact-item jeff">
+            <span class="contact-dot"></span>
+            <span>✏️ jefferson@email.com</span>
+          </div>
+          <div class="contact-item jeff">
+            <span class="contact-dot"></span>
+            <span>✏️ github.com/seuusuario</span>
+          </div>
+          <div class="contact-item jeff">
+            <span class="contact-dot"></span>
+            <span>João Pessoa, PB</span>
+          </div>
+        </div>
+
+        <div class="contact-card hugo">
+          <div class="contact-name hugo">Hugo Henrrique de Vieira Almeida</div>
+          <div class="contact-item hugo">
+            <span class="contact-dot"></span>
+            <span>✏️ hugo@email.com</span>
+          </div>
+          <div class="contact-item hugo">
+            <span class="contact-dot"></span>
+            <span>✏️ github.com/seuusuario</span>
+          </div>
+          <div class="contact-item hugo">
+            <span class="contact-dot"></span>
+            <span>✏️ linkedin.com/in/seuusuario</span>
+          </div>
+          <div class="contact-item hugo">
+            <span class="contact-dot"></span>
+            <span>João Pessoa, PB</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2026 · <strong>Jefferson Coqueijo Fidelis</strong> & <strong>Hugo Henrrique de Vieira Almeida</strong></p>
+    <p style="margin-top:6px;">Disciplina de Aplicações para Internet · Prof. Jeofton Costa</p>
+  </footer>
+
+  <script>
+    function loadPhoto(input, imgId, placeholderId) {
+      const file = input.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = document.getElementById(imgId);
+        const ph  = document.getElementById(placeholderId);
+        img.src = e.target.result;
+        img.style.display = 'block';
+        ph.style.display  = 'none';
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
 
 </body>
-
 </html>
