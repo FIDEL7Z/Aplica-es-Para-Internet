@@ -1,0 +1,50 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .experience-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .projects-shared {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    .profiles-grid,
+    .experience-columns,
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-card {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero { padding: 60px 20px 48px; }
+    section { padding: 52px 0; }
+  }

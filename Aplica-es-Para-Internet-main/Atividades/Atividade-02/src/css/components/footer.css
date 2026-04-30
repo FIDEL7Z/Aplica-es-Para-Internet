@@ -1,0 +1,9 @@
+footer {
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--muted);
+  }
+  
+  footer strong {
+    color: var(--text);
+  }

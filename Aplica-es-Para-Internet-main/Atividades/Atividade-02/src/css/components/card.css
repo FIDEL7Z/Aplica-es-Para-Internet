@@ -1,0 +1,81 @@
+/* PROFILE */
+.profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    position: relative;
+  }
+  
+  .profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 3px;
+  }
+  
+  .profile-card.jeff::before { background: var(--accent-jeff); }
+  .profile-card.hugo::before { background: var(--accent-hugo); }
+  
+  .profile-name {
+    font-family: 'Syne';
+    font-weight: 700;
+  }
+  
+  .profile-role { margin-bottom: 16px; }
+  
+  .profile-bio {
+    color: var(--muted);
+  }
+  
+  /* SKILLS */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .skill-tag {
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  
+  /* EXPERIENCE */
+  .exp-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .exp-title {
+    font-family: 'Syne';
+  }
+  
+  /* PROJECT */
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+  }
+  
+  .project-link {
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+  }
+  
+  /* CONTACT */
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px;
+  }
+  
+  .contact-item {
+    display: flex;
+    gap: 10px;
+  }

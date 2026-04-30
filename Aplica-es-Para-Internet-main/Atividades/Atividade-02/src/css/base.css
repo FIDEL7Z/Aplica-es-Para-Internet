@@ -1,0 +1,7 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }

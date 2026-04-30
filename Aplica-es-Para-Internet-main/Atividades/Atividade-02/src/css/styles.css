@@ -1,0 +1,588 @@
+/* ============================================================
+   VARIÁVEIS GLOBAIS — tokens de design centralizados
+   Facilita manutenção: alterar uma cor aqui reflete em todo o site
+============================================================ */
+:root {
+  --bg: #0d0f14;                        /* cor de fundo da página */
+  --surface: #13161e;                   /* fundo de cards e seções */
+  --surface2: #1a1e2a;                  /* fundo de elementos secundários */
+  --border: rgba(255, 255, 255, 0.07);  /* borda sutil sobre fundo escuro */
+  --accent-jeff: #0841ffe7;               /* cor de destaque do Jefferson */
+  --accent-hugo: #7c6cf5;               /* cor de destaque do Hugo */
+  --text: #e8eaf0;                      /* texto principal */
+  --muted: #8a8fa3;                     /* texto secundário / apagado */
+  --radius: 16px;                       /* borda arredondada padrão */
+}
+
+
+/* ============================================================
+   RESET — zera margens e paddings padrão do navegador
+   box-sizing: border-box faz padding/border não aumentar o tamanho do elemento
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   BODY — estilos base da página
+============================================================ */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+
+/* ============================================================
+   HERO — seção de apresentação inicial
+============================================================ */
+.hero {
+  background: linear-gradient(135deg, #0d0f14 0%, #111628 50%, #0d1420 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho decorativo atrás do conteúdo do hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 30% 60%, rgba(74, 240, 180, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 70% 40%, rgba(124, 108, 245, 0.07) 0%, transparent 70%);
+  pointer-events: none; /* impede que o ::before bloqueie cliques */
+}
+
+/* Pílula com o nome da disciplina */
+.hero-label {
+  display: inline-block;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 16px;
+  margin-bottom: 28px;
+}
+
+/* clamp() = tipografia fluida: mín 2rem, ideal 6vw, máx 3.6rem */
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+/* Cores individuais no título */
+.hero h1 span.jeff { color: var(--accent-jeff); }
+.hero h1 span.hugo { color: var(--accent-hugo); }
+
+.hero p {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   NAV — barra de navegação fixa no topo ao rolar a página
+============================================================ */
+nav {
+  position: sticky;         /* gruda no topo ao fazer scroll */
+  top: 0;
+  z-index: 100;             /* fica na frente de todos os outros elementos */
+  background: rgba(13, 15, 20, 0.88);
+  backdrop-filter: blur(16px); /* efeito fosco (glassmorphism) */
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+/* Flexbox: links centralizados e com quebra de linha se necessário */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--text); }
+
+
+/* ============================================================
+   CONTAINER — limita largura do conteúdo e centraliza na tela
+============================================================ */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* ============================================================
+   SEÇÕES — espaçamento e separação entre blocos de conteúdo
+============================================================ */
+section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Pequena tag acima do título (ex: "01 — Quem somos") */
+.section-tag {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-tag.jeff   { color: var(--accent-jeff); }
+.section-tag.hugo   { color: var(--accent-hugo); }
+.section-tag.shared { color: var(--muted); }
+
+/* clamp() = título responsivo sem precisar de media query */
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 48px;
+  letter-spacing: -0.02em;
+}
+
+
+/* ============================================================
+   PERFIS — grid lado a lado com os cards de cada integrante
+   CSS Grid com duas colunas iguais (1fr cada)
+============================================================ */
+.profiles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Linha colorida no topo do card usando pseudo-elemento */
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.profile-card.jeff::before { background: var(--accent-jeff); }
+.profile-card.hugo::before { background: var(--accent-hugo); }
+
+/* Círculo da foto de perfil */
+.photo-slot {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.photo-slot:hover { border-color: rgba(255, 255, 255, 0.3); }
+
+/* Imagem ocupa todo o círculo sem distorcer */
+.photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.photo-slot input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;        /* invisível mas clicável */
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-placeholder {
+  pointer-events: none; /* não interfere no clique do input */
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.profile-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.profile-card.jeff .profile-role { color: var(--accent-jeff); }
+.profile-card.hugo .profile-role { color: var(--accent-hugo); }
+
+.profile-bio {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   SKILLS — tags de tecnologias com Flexbox e quebra de linha
+============================================================ */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap; /* tags quebram para próxima linha se necessário */
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+/* Cores distintas para cada integrante */
+.jeff .skill-tag {
+  color: var(--accent-jeff);
+  border-color: rgba(163, 162, 163, 0.25);
+  background: rgba(221, 215, 219, 0.05);
+}
+
+.hugo .skill-tag {
+  color: var(--accent-hugo);
+  border-color: rgba(124, 108, 245, 0.25);
+  background: rgba(124, 108, 245, 0.05);
+}
+
+
+/* ============================================================
+   EXPERIÊNCIA — duas colunas (uma por integrante)
+   CSS Grid com duas colunas iguais
+============================================================ */
+.experience-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Cabeçalho de coluna com linha decorativa à direita via Flexbox */
+.exp-column-header {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Linha que cresce para preencher o espaço (flex: 1) */
+.exp-column-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.exp-column-header.jeff { color: var(--accent-jeff); }
+.exp-column-header.hugo { color: var(--accent-hugo); }
+
+/* Card de cada experiência */
+.exp-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.exp-item:hover { border-color: rgba(255, 255, 255, 0.14); }
+
+.exp-date    { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; font-weight: 300; }
+.exp-title   { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 2px; }
+.exp-company { font-size: 0.82rem; margin-bottom: 10px; }
+.exp-desc    { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+
+/* Cores da empresa por coluna */
+.jeff-col .exp-company { color: var(--accent-jeff); opacity: 0.8; }
+.hugo-col .exp-company { color: var(--accent-hugo); opacity: 0.8; }
+
+
+/* ============================================================
+   PROJETOS — lista vertical de cards com link externo
+   Grid interno: conteúdo à esquerda, botão à direita (auto)
+============================================================ */
+.projects-shared {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr auto; /* conteúdo cresce, botão só ocupa o necessário */
+  align-items: start;
+  gap: 24px;
+  transition: border-color 0.2s;
+}
+
+.project-card:hover { border-color: rgba(255, 255, 255, 0.14); }
+
+.project-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.project-card.collab .project-label { color: var(--muted); }
+
+.project-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Tags de tecnologia usadas no projeto */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* Botão "Ver projeto" */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.project-link:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container de mídia (vídeo e áudio) dentro dos cards */
+.project-media {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.project-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.project-media audio {
+  width: 100%;
+  display: block;
+}
+
+
+/* ============================================================
+   CONTATO — grid de dois cards, um por integrante
+============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+/* Linha colorida no topo diferencia os dois cards */
+.contact-card.jeff { border-top: 2px solid var(--accent-jeff); }
+.contact-card.hugo { border-top: 2px solid var(--accent-hugo); }
+
+.contact-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Cada linha de contato usa Flexbox para alinhar ícone + texto */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Bolinha colorida como marcador de item */
+.contact-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0; /* não encolhe mesmo se o texto for longo */
+}
+
+.jeff .contact-dot { background: var(--accent-jeff); }
+.hugo .contact-dot { background: var(--accent-hugo); }
+
+.contact-item a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover { color: var(--text); }
+
+
+/* ============================================================
+   FOOTER — rodapé com créditos
+============================================================ */
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+footer strong { color: var(--text); }
+
+
+/* ============================================================
+   ÍCONES SVG inline — usados nos itens de contato
+   SVG codificado em base64 dentro do background-image
+============================================================ */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-email {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0a0b0' stroke-width='2'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E");
+}
+
+.icon-github {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0a0b0'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E");
+}
+
+.icon-linkedin {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E");
+}
+
+.icon-portfolio {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0a0b0' stroke-width='2'%3E%3Crect x='2' y='7' width='20' height='14' rx='2'/%3E%3Cpath d='M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2'/%3E%3C/svg%3E");
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE — Mobile First
+   A partir de 768px ou menos, empilha as colunas em uma só
+============================================================ */
+@media (max-width: 768px) {
+
+  /* Grids de 2 colunas viram 1 coluna no mobile */
+  .profiles-grid,
+  .experience-columns,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Card de projeto: botão vai abaixo do conteúdo */
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero    { padding: 60px 20px 48px; }
+  section  { padding: 52px 0; }
+}

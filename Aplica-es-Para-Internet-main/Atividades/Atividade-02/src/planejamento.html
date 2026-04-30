@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento do Projeto</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0f14;
+      color: #e8eaf0;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .box {
+      background: #13161e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    pre {
+      background: #000;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      color: #0f0;
+    }
+
+    .btn-download {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      background: #7c6cf5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .btn-download:hover {
+      background: #5a4de0;
+    }
+
+    .ludico-box {
+      background: #1a1e2a;
+      border-left: 4px solid #7c6cf5;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    .wireframe-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wireframe-plan img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #13161e;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>📐 Planejamento do Projeto</h1>
+
+  <section>
+    <h2>1. Definição do Problema</h2>
+    <div class="box">
+      <p><strong>Contexto:</strong> Desenvolvedores precisam apresentar suas habilidades de forma profissional.</p>
+      <p><strong>Público-alvo:</strong> Recrutadores e professores.</p>
+      <p><strong>Dor:</strong> Dificuldade de visualizar informações rapidamente.</p>
+      <p><strong>Sucesso:</strong> Entender o perfil em menos de 10 segundos.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Wireframe</h2>
+
+    <div class="wireframe-plan">
+        <img
+          id="wireframe"
+          src="/img/wireframe.png"
+          alt="Wireframe do projeto"
+        />
+      </div>
+    
+
+    <a href="/img/wireframe.png" download class="btn-download">
+      ⬇️ Baixar imagem do Wireframe
+    </a>
+  </section>
+
+  <section>
+    <h2>3. Arquitetura de Informação</h2>
+    <div class="box">
+    <div class="box">
+
+      <p><strong>Organização: </strong>Conteúdo dividido em seções claras: Sobre, Experiência, Projetos e Contato. <br> Cada seção com propósito específico</p>
+      <p><strong>Rotulagem: </strong>Nomes intuitivos: Sobre, Experiência, Projetos, Contato</p>
+      <p><strong>Navegação: </strong>Navegação por menu com âncoras e Rolagem direta para seções</p>
+      <p><strong>Hierarquia: </strong>H1 → Nome principal, Títulos de seção → destaque, Texto → suporte</p>
+      
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Tipografia</h2>
+    <div class="box">
+
+      <p><strong>Famílias utilizadas: </strong>Títulos: Syne, Texto: DM Sans</p>
+      <p><strong>Hierarquia: </strong>H1: Nome principal, Títulos: Seções, Texto: descrições</p>
+      <p><strong>Objetivo: </strong>Garantir legibilidade e Criar hierarquia visual clara</p>
+      
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Sistema de Cores</h2>
+    <div class="box">
+
+     <p><strong>Cores principais: </strong>Fundo: escuro (#0d0f14), Destaque Jefferson: azul, Destaque Hugo: roxo</p>
+     <p><strong>Funções: </strong>Diferenciar perfis e Guiar atenção do usuário</p>
+     <p><strong>Acessibilidade: </strong>Contraste adequado para leitura</p>
+      
+    
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Organização CSS</h2>
+    <div class="box">
+    
+    <p><strong>Componentes reutilizáveis: </strong>Remoção de margens e paddings, box-sizing: border-box</p>
+    <p><strong>Organização: </strong>Uso de variáveis por CSS e Separação por componentes</p>
+    <p><strong>Estrutura lógica: </strong>Hero, Navegação, Seções, Cards</p>
+
+
+
+    </div>
+
+    <div class="ludico-box">
+      <strong>Componentes reutilizáveis:</strong><br>
+      → profile-card (perfil dos integrantes)<br>
+      → project-card (projetos)<br>
+      → contact-card (contato)<br>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Responsividade</h2>
+    <div class="box">
+      <p>Layout adaptável usando Grid e Flexbox.</p>
+      <p>No mobile, colunas viram uma única coluna.</p>
+    </div>
+
+    <div class="ludico-box">
+      <strong>Técnicas usadas:</strong><br>
+      → CSS Grid (organizar layout)<br>
+      → Flexbox (alinhar elementos)<br>
+      → Media Queries (adaptar telas)<br><br>
+
+      <strong>Comportamento:</strong><br>
+      → Desktop: 2 colunas lado a lado<br>
+      → Mobile: tudo empilhado<br>
+      → Texto se adapta com clamp()<br>
+      
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

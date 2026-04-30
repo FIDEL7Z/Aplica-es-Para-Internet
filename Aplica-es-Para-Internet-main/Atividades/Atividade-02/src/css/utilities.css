@@ -1,0 +1,19 @@
+.section-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  .section-tag.jeff   { color: var(--accent-jeff); }
+  .section-tag.hugo   { color: var(--accent-hugo); }
+  .section-tag.shared { color: var(--muted); }
+  
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 48px;
+  }
