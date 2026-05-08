@@ -1,0 +1,81 @@
+/* ============================================================
+   HEADER & NAVBAR (ITCSS: Components)
+   ============================================================ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 0.75rem 1.5rem;
+}
+
+/* --- Menu Mobile (Oculto por padrão) --- */
+.navbar__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    list-style: none;
+    padding: 1rem 0;
+}
+
+/* Classe de controle do JavaScript */
+.navbar__menu--open {
+    display: flex;
+}
+
+/* --- Links de Navegação --- */
+.navbar__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: var(--font-sm);
+    font-weight: var(--weight-medium);
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar__link:hover,
+.navbar__link:focus-visible {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-500);
+    outline: 2px solid var(--color-primary-500); /* Foco acessível */
+}
+
+.navbar__link--active {
+    color: var(--color-primary-500);
+    font-weight: var(--weight-bold);
+}
+
+/* --- Desktop (Menu Horizontal) --- */
+@media (min-width: 768px) {
+    .navbar__toggle {
+        display: none; /* Esconde o botão hamburger no desktop */
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        border: none;
+        padding: 0;
+        gap: 0.25rem;
+    }
+}

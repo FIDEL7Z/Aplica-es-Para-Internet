@@ -1,0 +1,37 @@
+.hero {
+    background: linear-gradient(135deg, #0d0f14 0%, #111628 50%, #0d1420 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .hero-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 16px;
+    margin-bottom: 28px;
+  }
+  
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+  }
+  
+  .hero h1 .jeff { color: var(--accent-jeff); }
+  .hero h1 .hugo { color: var(--accent-hugo); }
+  
+  .hero p {
+    color: var(--muted);
+  }
