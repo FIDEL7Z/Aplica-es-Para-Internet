@@ -1,0 +1,24 @@
+:root {
+  --font-family-heading: 'Syne', sans-serif;
+  --font-family-body: 'DM Sans', sans-serif;
+
+  --font-size-xs: 0.72rem;
+  --font-size-sm: 0.82rem;
+  --font-size-md: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: clamp(1.6rem, 4vw, 2.2rem);
+  --font-size-display: clamp(2rem, 6vw, 3.6rem);
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --leading-tight: 1.1;
+  --leading-base: 1.6;
+  --leading-loose: 1.7;
+}

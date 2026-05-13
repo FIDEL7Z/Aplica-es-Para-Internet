@@ -1,0 +1,20 @@
+:root {
+  --color-page-bg: var(--_neutral-950);
+  --color-surface: var(--_neutral-850);
+  --color-surface-raised: var(--_neutral-800);
+  --color-surface-strong: var(--_neutral-900);
+  --color-border-default: color-mix(in srgb, var(--_neutral-0) 8%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--_neutral-0) 18%, transparent);
+  --color-text-primary: var(--_neutral-100);
+  --color-text-secondary: var(--_neutral-500);
+  --color-text-inverse: var(--_neutral-950);
+  --color-action-primary: var(--_mint-400);
+  --color-action-secondary: var(--_violet-500);
+  --color-action-primary-hover: var(--_mint-300);
+  --color-action-secondary-hover: var(--_violet-300);
+  --color-focus-ring: var(--_mint-300);
+  --color-danger: var(--_red-400);
+  --color-success: var(--_green-400);
+  --shadow-elevated: 0 18px 44px var(--_shadow-color);
+  --shadow-header: 0 10px 30px var(--_shadow-color);
+}

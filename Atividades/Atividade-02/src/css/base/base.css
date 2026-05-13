@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-page-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  line-height: var(--leading-base);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-action-primary) 35%, transparent);
+  color: var(--color-text-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}

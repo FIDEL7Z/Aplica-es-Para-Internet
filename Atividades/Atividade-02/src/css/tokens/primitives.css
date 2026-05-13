@@ -1,0 +1,31 @@
+/*
+  Tokens primitivos: valores brutos do sistema visual.
+  Convenção da Aula 10: o prefixo "_" sinaliza uso interno; componentes devem
+  consumir tokens semânticos, nunca estes valores diretamente.
+*/
+
+:root {
+  --_neutral-0: #ffffff;
+  --_neutral-50: #f7f8fb;
+  --_neutral-100: #e8eaf0;
+  --_neutral-300: #b6bac8;
+  --_neutral-500: #8a8fa3;
+  --_neutral-700: #2b3140;
+  --_neutral-800: #1a1e2a;
+  --_neutral-850: #13161e;
+  --_neutral-900: #111827;
+  --_neutral-950: #0d0f14;
+
+  --_mint-300: #7ff8cf;
+  --_mint-400: #4af0b4;
+  --_mint-500: #25d29a;
+
+  --_violet-300: #a59cf9;
+  --_violet-400: #8d7ff6;
+  --_violet-500: #7c6cf5;
+
+  --_red-400: #ff6b7a;
+  --_green-400: #4ade80;
+
+  --_shadow-color: rgba(0, 0, 0, 0.32);
+}

@@ -1,0 +1,40 @@
+.section-tag {
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.section-tag--jeff {
+  color: var(--color-action-primary);
+}
+
+.section-tag--hugo {
+  color: var(--color-action-secondary);
+}
+
+.section-tag--shared {
+  color: var(--color-text-secondary);
+}
+
+.section-title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  margin-bottom: var(--space-12);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

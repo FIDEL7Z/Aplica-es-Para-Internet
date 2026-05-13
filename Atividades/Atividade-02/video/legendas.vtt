@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+Demonstração do sistema de desenho por visão computacional.
+
+00:00:05.000 --> 00:00:12.000
+O projeto utiliza rastreamento de mãos para controlar o desenho sem contato físico.
+
+00:00:12.000 --> 00:00:20.000
+A interação mostra a aplicação prática de Python, OpenCV e MediaPipe.

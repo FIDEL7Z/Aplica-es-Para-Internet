@@ -1,0 +1,64 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-default);
+  background:
+    radial-gradient(
+      ellipse 60% 40% at 30% 60%,
+      color-mix(in srgb, var(--color-action-primary) 10%, transparent) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 70% 40%,
+      color-mix(in srgb, var(--color-action-secondary) 10%, transparent) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-page-bg) 0%,
+      var(--color-surface-strong) 55%,
+      var(--color-page-bg) 100%
+    );
+  padding: var(--space-18) var(--space-6) var(--space-16);
+  text-align: center;
+}
+
+.hero-label {
+  display: inline-block;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0;
+  margin-bottom: var(--space-8);
+  padding: var(--space-1) var(--space-4);
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0;
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+  overflow-wrap: break-word;
+}
+
+.hero h1 .jeff {
+  color: var(--color-action-primary);
+}
+
+.hero h1 .hugo {
+  color: var(--color-action-secondary);
+}
+
+.hero p {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  overflow-wrap: break-word;
+}

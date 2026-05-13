@@ -1,465 +1,617 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio – Jefferson & Hugo</title>
+    <meta
+      name="description"
+      content="Portfólio acadêmico responsivo de Jefferson Coqueijo Fidelis e Hugo Henrrique de Vieira Almeida para a disciplina de Aplicações para Internet."
+    />
+    <title>Portfólio - Jefferson & Hugo</title>
 
-    <!-- Google Fonts: Syne (títulos) + DM Sans (corpo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Folha de estilos principal -->
-    <link rel="stylesheet" href="/Atividades/Atividade-02/src/style/styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <!-- ============================================================
-         HERO — Apresentação inicial com os nomes da dupla
-    ============================================================ -->
-    <div class="hero">
-      <div class="hero-label">Aplicações para Internet — 2026</div>
-      <h1>
-        <span class="jeff">Jefferson</span> &<br />
-        <span class="hugo">Hugo</span>
-      </h1>
-    </div>
+    <header class="header">
+      <nav class="navbar" aria-label="Navegação principal">
+        <a href="#topo" class="navbar__brand" aria-label="Ir para o início">
+          Jeff &amp; Hugo
+        </a>
 
+        <button
+          class="navbar__toggle"
+          aria-expanded="false"
+          aria-controls="navbar-menu"
+          aria-label="Abrir menu de navegação"
+          type="button"
+        >
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+        </button>
 
-    <!-- ============================================================
-         NAV — Navegação fixa com âncoras para cada seção
-    ============================================================ -->
-    <nav aria-label="Navegação principal">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+        <ul class="navbar__menu" id="navbar-menu" role="list">
+          <li class="navbar__item">
+            <a href="#sobre" class="navbar__link">Sobre</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#experiencia" class="navbar__link">Experiência</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#projetos" class="navbar__link">Projetos</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contato" class="navbar__link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <main id="conteudo" class="main">
+      <section class="hero" id="topo" aria-labelledby="hero-title">
+        <div class="hero-label">Aplicações para Internet - 2026</div>
+        <h1 id="hero-title">
+          <span class="jeff">Jefferson</span> &amp;<br />
+          <span class="hugo">Hugo</span>
+        </h1>
+        <p>Portfólio da dupla para a disciplina de Aplicações para Internet.</p>
+      </section>
 
-    <!-- ============================================================
-         SEÇÃO 01 — SOBRE
-         Perfis individuais com foto, bio e skills de cada integrante
-    ============================================================ -->
-    <section id="sobre">
-      <div class="container">
-        <div class="section-tag shared">01 — Quem somos</div>
-        <div class="section-title">Sobre a dupla</div>
+      <section id="sobre" class="section" aria-labelledby="sobre-title">
+        <div class="container">
+          <div class="section-tag section-tag--shared">01 - Quem somos</div>
+          <h2 class="section-title" id="sobre-title">Sobre a dupla</h2>
 
-        <div class="profiles-grid">
-
-          <!-- Perfil: Jefferson -->
-          <div class="profile-card jeff">
-            <div class="photo-slot">
-              <img
-                id="foto-jeff"
-                src="/Atividades/Atividade-02/img/jeff.png"
-                alt="Foto de Jefferson Coqueijo Fidelis"
-              />
-            </div>
-            <div class="profile-name">Jefferson Coqueijo Fidelis</div>
-            <div class="profile-role">Dados & Inteligência Artificial</div>
-            <p class="profile-bio">
-              Desenvolvedor com 4 anos de experiência na área de tecnologia,
-              atuando na construção de sistemas escaláveis e aplicações web de
-              ponta a ponta. Experiência prática com Python, Node.js, Java,
-              React e Angular, além de integração de serviços e arquitetura
-              orientada a dados.
-            </p>
-            <p class="profile-bio" style="margin-top: 10px">
-              Atua consistentemente em projetos com Inteligência Artificial,
-              incluindo aplicações com LLMs, RAG e visão computacional — sempre
-              conectando tecnologia a problemas reais de negócio.
-            </p>
-            <!-- Tags de tecnologias do Jefferson -->
-            <div class="skills-list jeff">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">LLMs / RAG</span>
-              <span class="skill-tag">Visão Computacional</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Dados & IA</span>
-            </div>
-          </div>
-
-          <!-- Perfil: Hugo -->
-          <div class="profile-card hugo">
-            <div class="photo-slot">
-              <img
-                id="foto-hugo"
-                src="/Atividades/Atividade-02/img/hugo.jpg"
-                alt="Foto de Hugo Henrrique de Vieira Almeida"
-              />
-            </div>
-            <div class="profile-name">Hugo Henrrique de Vieira Almeida</div>
-            <div class="profile-role">Desenvolvimento de Software</div>
-            <p class="profile-bio">
-              Foco em construção de aplicações web modernas e escaláveis.
-              Apaixonado por boas práticas de engenharia, performance e
-              experiência do usuário — do back-end à interface final.
-            </p>
-            <p class="profile-bio" style="margin-top: 10px">
-              Desenvolvedor decidido em transformar ideias em código e ritmos.
-              Atualmente no 8º período de Ciência da Computação, focando em
-              arquitetura de software e soluções educacionais.
-            </p>
-            <!-- Tags de tecnologias do Hugo -->
-            <div class="skills-list hugo">
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">HTML5 / CSS3</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">APIs REST</span>
-              <span class="skill-tag">UI / UX</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         SEÇÃO 02 — EXPERIÊNCIA PROFISSIONAL
-         Duas colunas lado a lado, uma para cada integrante
-    ============================================================ -->
-    <section id="experiencia">
-      <div class="container">
-        <div class="section-tag shared">02 — Trajetória</div>
-        <div class="section-title">Experiência profissional</div>
-
-        <div class="experience-columns">
-
-          <!-- Coluna Jefferson -->
-          <div class="jeff-col">
-            <div class="exp-column-header jeff">Jefferson</div>
-
-            <div class="exp-item">
-              <div class="exp-date">Abr 2024 — Presente</div>
-              <div class="exp-title">Analista de Business Intelligence</div>
-              <div class="exp-company">Dataprev</div>
-              <div class="exp-desc">
-                Desenvolvimento de dashboards, painéis interativos e relatórios
-                analíticos utilizando JavaScript, Java, Oracle, WebFOCUS e
-                Hyperstage, com foco em usabilidade, clareza visual e] apoio à
-                tomada de decisão em projetos governamentais.
+          <div class="profiles-grid">
+            <article class="profile-card profile-card--jeff">
+              <div class="photo-slot">
+                <img
+                  id="foto-jeff"
+                  src="../img/jeff.png"
+                  alt="Foto de Jefferson Coqueijo Fidelis"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
 
-            <div class="exp-item">
-              <div class="exp-date">Ago 2024 — Jan 2025</div>
-              <div class="exp-title">Desenvolvedor de Software</div>
-              <div class="exp-company">Compass UOL</div>
-              <div class="exp-desc">
-                Desenvolvimento de aplicações web com React, Redux, JavaScript e
-                TypeScript, aplicando boas práticas de componentização,
-                responsividade, segurança web, versionamento com Git e
-                documentação de componentes com Storybook.
-              </div>
-            </div>
-
-            <div class="exp-item">
-              <div class="exp-date">Jul 2023 — Dez 2023</div>
-              <div class="exp-title">Desenvolvedor Full Stack</div>
-              <div class="exp-company">Fábrica de Software UBTech</div>
-              <div class="exp-desc">
-                Criação de solução de IA para análise de comentários da Polícia
-                Militar de João Pessoa, utilizando Python, Django e Docker, com
-                integração a dashboards interativos em JavaScript, APIs
-                consumidas pelo front-end e visualizações orientadas a dados.
-              </div>
-            </div>
-          </div>
-
-          <!-- Coluna Hugo -->
-          <div class="hugo-col">
-            <div class="exp-column-header hugo">Hugo</div>
-
-            <div class="exp-item">
-              <div class="exp-date">Mai/2025 – Set/2025</div>
-              <div class="exp-title">Estagiário – Suporte N1</div>
-              <div class="exp-company">Upciga Sistemas</div>
-              <div class="exp-desc">
-                Suporte técnico e Service Desk com diagnóstico e resolução de
-                incidentes de hardware, software, rede e sistemas. Responsável
-                pela criação e manutenção de páginas web para uso interno e
-                externo, mantendo comunicação clara com usuários e equipes
-                técnicas para alinhamento e solução de demandas.
-              </div>
-            </div>
-
-            <div class="exp-item">
-              <div class="exp-date">Abr/2024 – Set/2024</div>
-              <div class="exp-title">Estagiário – Tecnologia da Informação</div>
-              <div class="exp-company">Procon Estadual da Paraíba</div>
-              <div class="exp-desc">
-                Manutenção preventiva e corretiva de computadores e redes,
-                apoio técnico nos sistemas do órgão e diagnóstico e solução de
-                problemas de infraestrutura de TI.
-              </div>
-            </div>
-
-            <div class="exp-item">
-              <div class="exp-date">Fev/2024 — Abr/2024</div>
-              <div class="exp-title">Analista de Dados (Projeto Acadêmico)</div>
-              <div class="exp-company">Fábrica de Software – Unipê</div>
-              <div class="exp-desc">
-                Desenvolvimento de dashboards interativos com Power BI,
-                visualização e análise de dados com gráficos em Python, além de
-                modelagem e gerenciamento de bancos de dados em MySQL.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         SEÇÃO 03 — PROJETOS
-         Projetos individuais e o projeto colaborativo da disciplina
-    ============================================================ -->
-    <section id="projetos">
-      <div class="container">
-        <div class="section-tag shared">03 — Trabalhos</div>
-        <div class="section-title">Projetos em destaque</div>
-
-        <div class="projects-shared">
-
-          <!-- Projeto 1: Jefferson — Vision-Based Drawing System -->
-          <div class="project-card">
-            <div>
-              <div class="project-label" style="color: var(--accent-jeff)">
-                Jefferson · Dados & IA
-              </div>
-              <div class="project-name">Vision-Based Drawing System</div>
-              <p class="project-desc">
-                Sistema de desenho em tempo real baseado em Visão Computacional,
-                utilizando rastreamento de mãos para interação gestual sem
-                contato físico.
+              <h3 class="profile-name">Jefferson Coqueijo Fidelis</h3>
+              <p class="profile-role">Dados &amp; Inteligência Artificial</p>
+              <p class="profile-bio">
+                Desenvolvedor com 4 anos de experiência na área de tecnologia,
+                atuando na construção de sistemas escaláveis e aplicações web de
+                ponta a ponta. Experiência prática com Python, Node.js, Java,
+                React e Angular, além de integração de serviços e arquitetura
+                orientada a dados.
               </p>
-              <!-- Vídeo demonstrativo do projeto -->
-              <div class="project-media">
-                <video
-                  src="/Atividades/Atividade-02/video/WhatsApp Video 2026-04-26 at 19.00.00.mp4"
-                  controls
-                ></video>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">OpenCV</span>
-                <span class="project-tag">MediaPipe</span>
-                <span class="project-tag">Visão Computacional</span>
-              </div>
-            </div>
-            <a
-              href="https://github.com/FIDEL7Z/VisionBased_DrawingSystem"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              Ver projeto ↗
-            </a>
-          </div>
-
-          <!-- Projeto 2: Jefferson — Steroid Manager -->
-          <div class="project-card">
-            <div>
-              <div class="project-label" style="color: var(--accent-jeff)">
-                Jefferson · Dados & IA
-              </div>
-              <div class="project-name">Steroid Manager</div>
-              <p class="project-desc">
-                Aplicação web para gerenciamento de uma loja de anabolizantes e
-                suplementos, com recursos de cadastro de produtos, acompanhamento
-                de vendas, lucros e gastos.
+              <p class="profile-bio profile-bio--spaced">
+                Atua consistentemente em projetos com Inteligência Artificial,
+                incluindo aplicações com LLMs, RAG e visão computacional, sempre
+                conectando tecnologia a problemas reais de negócio.
               </p>
-              <!-- Áudio explicativo do projeto -->
-              <div class="project-media">
-                <audio controls>
-                  <source
-                    src="/Atividades/Atividade-02/src/audio/audio.mp3"
-                    type="audio/mpeg"
-                  />
-                  Seu navegador não suporta o elemento de áudio.
-                </audio>
-              </div>
-              <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">React</span>
-                <span class="project-tag">API</span>
-                <span class="project-tag">Dados</span>
-              </div>
-            </div>
-            <a
-              href="https://github.com/FIDEL7Z/VisionBased_DrawingSystem"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              Ver projeto ↗
-            </a>
-          </div>
 
-          <!-- Projeto 3: Hugo — Pokédex -->
-          <div class="project-card">
-            <div>
-              <div class="project-label" style="color: var(--accent-hugo)">
-                Hugo · Desenvolvimento Web
+              <ul class="skills-list skills-list--jeff" role="list">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">LLMs / RAG</li>
+                <li class="skill-tag">Visão Computacional</li>
+                <li class="skill-tag">Node.js</li>
+                <li class="skill-tag">React</li>
+                <li class="skill-tag">Dados &amp; IA</li>
+              </ul>
+            </article>
+
+            <article class="profile-card profile-card--hugo">
+              <div class="photo-slot">
+                <img
+                  id="foto-hugo"
+                  src="../img/hugo.jpg"
+                  alt="Foto de Hugo Henrrique de Vieira Almeida"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div class="project-name">Pokédex</div>
-              <p class="project-desc">
-                Pokédex full stack desenvolvida como desafio técnico, integrando
-                front-end em Next.js com API em NestJS, com deploy na Vercel.
+
+              <h3 class="profile-name">Hugo Henrrique de Vieira Almeida</h3>
+              <p class="profile-role">Desenvolvimento de Software</p>
+              <p class="profile-bio">
+                Foco em construção de aplicações web modernas e escaláveis.
+                Apaixonado por boas práticas de engenharia, performance e
+                experiência do usuário, do back-end à interface final.
               </p>
-              <div class="project-tags">
-                <span class="project-tag">TypeScript</span>
-                <span class="project-tag">Next.js</span>
-                <span class="project-tag">NestJS</span>
-                <span class="project-tag">Vercel</span>
-                <span class="project-tag">CSS</span>
-              </div>
-            </div>
-            <a
-              href="https://github.com/hugoalmx/pokedexdesafio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              Ver projeto ↗
-            </a>
-          </div>
-
-          <!-- Projeto 4: Colaborativo — Portfólio da Disciplina -->
-          <div class="project-card collab" style="border-color: rgba(255,255,255,0.1)">
-            <div>
-              <div class="project-label">
-                Colaborativo · Aplicações para Internet
-              </div>
-              <div class="project-name">Portfólio da Dupla</div>
-              <p class="project-desc">
-                Página web desenvolvida em dupla para a disciplina de Aplicações
-                para Internet, aplicando HTML5 semântico, CSS responsivo com
-                Flexbox e Grid, formulários validados e layout mobile-first
-                conforme especificações do professor.
+              <p class="profile-bio profile-bio--spaced">
+                Desenvolvedor decidido em transformar ideias em código e ritmos.
+                Atualmente no 8º período de Ciência da Computação, focando em
+                arquitetura de software e soluções educacionais.
               </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML5</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">Flexbox</span>
-                <span class="project-tag">CSS Grid</span>
-                <span class="project-tag">Responsivo</span>
-                <span class="project-tag">Mobile-First</span>
-              </div>
-            </div>
-          </div>
 
+              <ul class="skills-list skills-list--hugo" role="list">
+                <li class="skill-tag">JavaScript</li>
+                <li class="skill-tag">HTML5 / CSS3</li>
+                <li class="skill-tag">React</li>
+                <li class="skill-tag">Git</li>
+                <li class="skill-tag">APIs REST</li>
+                <li class="skill-tag">UI / UX</li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section id="experiencia" class="section" aria-labelledby="experiencia-title">
+        <div class="container">
+          <div class="section-tag section-tag--shared">02 - Trajetória</div>
+          <h2 class="section-title" id="experiencia-title">
+            Experiência profissional
+          </h2>
 
-    <!-- ============================================================
-         SEÇÃO 04 — CONTATO
-         Links de redes sociais e formas de contato de cada um
-    ============================================================ -->
-    <section id="contato">
-      <div class="container">
-        <div class="section-tag shared">04 — Fale com a gente</div>
-        <div class="section-title">Contato</div>
+          <div class="experience-columns">
+            <section class="experience-column" aria-labelledby="experiencia-jeff">
+              <h3 class="exp-column-header exp-column-header--jeff" id="experiencia-jeff">
+                Jefferson
+              </h3>
 
-        <div class="contact-grid">
+              <article class="exp-item">
+                <p class="exp-date">Abr 2024 - Presente</p>
+                <h4 class="exp-title">Analista de Business Intelligence</h4>
+                <p class="exp-company">Dataprev</p>
+                <p class="exp-desc">
+                  Desenvolvimento de dashboards, painéis interativos e relatórios
+                  analíticos utilizando JavaScript, Java, Oracle, WebFOCUS e
+                  Hyperstage, com foco em usabilidade, clareza visual e apoio à
+                  tomada de decisão em projetos governamentais.
+                </p>
+              </article>
 
-          <!-- Contato: Jefferson -->
-          <div class="contact-card jeff">
-            <div class="contact-name jeff">Jefferson Coqueijo Fidelis</div>
-            <div class="contact-item jeff">
-              <span class="contact-dot"></span>
-              <a href="https://portfolio-swart-omega-50.vercel.app/" target="_blank" rel="noopener">
-                Portfólio
-              </a>
-            </div>
-            <div class="contact-item jeff">
-              <span class="contact-dot"></span>
-              <a href="mailto:jefferson@email.com">E-mail</a>
-            </div>
-            <div class="contact-item jeff">
-              <span class="contact-dot"></span>
-              <a href="https://github.com/FIDEL7Z" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </div>
-            <div class="contact-item jeff">
-              <span class="contact-dot"></span>
-              <a href="https://www.linkedin.com/in/jefferson-fidelis-16bb091b1/" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-            </div>
-            <div class="contact-item jeff">
-              <span class="contact-dot"></span>
-              <span>João Pessoa, PB</span>
-            </div>
+              <article class="exp-item">
+                <p class="exp-date">Ago 2024 - Jan 2025</p>
+                <h4 class="exp-title">Desenvolvedor de Software</h4>
+                <p class="exp-company">Compass UOL</p>
+                <p class="exp-desc">
+                  Desenvolvimento de aplicações web com React, Redux, JavaScript
+                  e TypeScript, aplicando boas práticas de componentização,
+                  responsividade, segurança web, versionamento com Git e
+                  documentação de componentes com Storybook.
+                </p>
+              </article>
+
+              <article class="exp-item">
+                <p class="exp-date">Jul 2023 - Dez 2023</p>
+                <h4 class="exp-title">Desenvolvedor Full Stack</h4>
+                <p class="exp-company">Fábrica de Software UBTech</p>
+                <p class="exp-desc">
+                  Criação de solução de IA para análise de comentários da Polícia
+                  Militar de João Pessoa, utilizando Python, Django e Docker, com
+                  integração a dashboards interativos em JavaScript, APIs
+                  consumidas pelo front-end e visualizações orientadas a dados.
+                </p>
+              </article>
+            </section>
+
+            <section class="experience-column" aria-labelledby="experiencia-hugo">
+              <h3 class="exp-column-header exp-column-header--hugo" id="experiencia-hugo">
+                Hugo
+              </h3>
+
+              <article class="exp-item">
+                <p class="exp-date">Mai 2025 - Set 2025</p>
+                <h4 class="exp-title">Estagiário - Suporte N1</h4>
+                <p class="exp-company">Upciga Sistemas</p>
+                <p class="exp-desc">
+                  Suporte técnico e Service Desk com diagnóstico e resolução de
+                  incidentes de hardware, software, rede e sistemas. Responsável
+                  pela criação e manutenção de páginas web para uso interno e
+                  externo, mantendo comunicação clara com usuários e equipes
+                  técnicas para alinhamento e solução de demandas.
+                </p>
+              </article>
+
+              <article class="exp-item">
+                <p class="exp-date">Abr 2024 - Set 2024</p>
+                <h4 class="exp-title">Estagiário - Tecnologia da Informação</h4>
+                <p class="exp-company">Procon Estadual da Paraíba</p>
+                <p class="exp-desc">
+                  Manutenção preventiva e corretiva de computadores e redes,
+                  apoio técnico nos sistemas do órgão e diagnóstico e solução de
+                  problemas de infraestrutura de TI.
+                </p>
+              </article>
+
+              <article class="exp-item">
+                <p class="exp-date">Fev 2024 - Abr 2024</p>
+                <h4 class="exp-title">Analista de Dados (Projeto Acadêmico)</h4>
+                <p class="exp-company">Fábrica de Software - Unipê</p>
+                <p class="exp-desc">
+                  Desenvolvimento de dashboards interativos com Power BI,
+                  visualização e análise de dados com gráficos em Python, além de
+                  modelagem e gerenciamento de bancos de dados em MySQL.
+                </p>
+              </article>
+            </section>
           </div>
-
-          <!-- Contato: Hugo -->
-          <div class="contact-card hugo">
-            <div class="contact-name hugo">Hugo Henrrique de Vieira Almeida</div>
-            <div class="contact-item hugo">
-              <span class="contact-dot"></span>
-              <a href="https://portfoliohugoalmeida.vercel.app/" target="_blank" rel="noopener">
-                Portfólio
-              </a>
-            </div>
-            <div class="contact-item hugo">
-              <span class="contact-dot"></span>
-              <a href="mailto:contato.hugoalmeida@gmail.com">E-mail</a>
-            </div>
-            <div class="contact-item hugo">
-              <span class="contact-dot"></span>
-              <a href="https://github.com/hugoalmx" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </div>
-            <div class="contact-item hugo">
-              <span class="contact-dot"></span>
-              <a href="https://www.linkedin.com/in/hugo-halmeida/" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-            </div>
-            <div class="contact-item hugo">
-              <span class="contact-dot"></span>
-              <span>João Pessoa, PB</span>
-            </div>
-          </div>
-
         </div>
+      </section>
+
+      <section id="projetos" class="section" aria-labelledby="projetos-title">
+        <div class="container">
+          <div class="section-tag section-tag--shared">03 - Trabalhos</div>
+          <h2 class="section-title" id="projetos-title">Projetos em destaque</h2>
+
+          <div class="projects-shared">
+            <article class="project-card">
+              <div>
+                <p class="project-label project-label--jeff">
+                  Jefferson · Dados &amp; IA
+                </p>
+                <h3 class="project-name">Vision-Based Drawing System</h3>
+                <p class="project-desc">
+                  Sistema de desenho em tempo real baseado em Visão
+                  Computacional, utilizando rastreamento de mãos para interação
+                  gestual sem contato físico.
+                </p>
+
+                <div class="project-media">
+                  <video
+                    controls
+                    preload="metadata"
+                    aria-label="Demonstração do Vision-Based Drawing System"
+                  >
+                    <source
+                      src="../video/WhatsApp Video 2026-04-26 at 19.00.00.mp4"
+                      type="video/mp4"
+                    />
+                    <track
+                      src="../video/legendas.vtt"
+                      kind="subtitles"
+                      srclang="pt-BR"
+                      label="Português"
+                      default
+                    />
+                    <p>
+                      Seu navegador não suporta vídeos em HTML5.
+                      <a href="../video/WhatsApp Video 2026-04-26 at 19.00.00.mp4">
+                        Baixe o vídeo aqui
+                      </a>.
+                    </p>
+                  </video>
+                </div>
+
+                <ul class="project-tags" role="list">
+                  <li class="project-tag">Python</li>
+                  <li class="project-tag">OpenCV</li>
+                  <li class="project-tag">MediaPipe</li>
+                  <li class="project-tag">Visão Computacional</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://github.com/FIDEL7Z/VisionBased_DrawingSystem"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline project-link"
+                aria-label="Ver projeto Vision-Based Drawing System no GitHub"
+              >
+                Ver projeto
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div>
+                <p class="project-label project-label--jeff">
+                  Jefferson · Dados &amp; IA
+                </p>
+                <h3 class="project-name">Steroid Manager</h3>
+                <p class="project-desc">
+                  Aplicação web para gerenciamento de uma loja de anabolizantes e
+                  suplementos, com recursos de cadastro de produtos,
+                  acompanhamento de vendas, lucros e gastos.
+                </p>
+
+                <div class="project-media">
+                  <audio
+                    controls
+                    preload="metadata"
+                    aria-label="Apresentação do projeto Steroid Manager"
+                  >
+                    <source src="audio/audio.mp3" type="audio/mpeg" />
+                    Seu navegador não suporta o elemento de áudio.
+                  </audio>
+                </div>
+
+                <ul class="project-tags" role="list">
+                  <li class="project-tag">Python</li>
+                  <li class="project-tag">React</li>
+                  <li class="project-tag">API</li>
+                  <li class="project-tag">Dados</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://github.com/FIDEL7Z"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline project-link"
+                aria-label="Ver perfil de Jefferson no GitHub"
+              >
+                Ver GitHub
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div>
+                <p class="project-label project-label--hugo">
+                  Hugo · Desenvolvimento Web
+                </p>
+                <h3 class="project-name">Pokédex</h3>
+                <p class="project-desc">
+                  Pokédex full stack desenvolvida como desafio técnico,
+                  integrando front-end em Next.js com API em NestJS, com deploy
+                  na Vercel.
+                </p>
+
+                <ul class="project-tags" role="list">
+                  <li class="project-tag">TypeScript</li>
+                  <li class="project-tag">Next.js</li>
+                  <li class="project-tag">NestJS</li>
+                  <li class="project-tag">Vercel</li>
+                  <li class="project-tag">CSS</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://github.com/hugoalmx/pokedexdesafio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline project-link"
+                aria-label="Ver projeto Pokédex no GitHub"
+              >
+                Ver projeto
+              </a>
+            </article>
+
+            <article class="project-card project-card--collab">
+              <div>
+                <p class="project-label project-label--shared">
+                  Colaborativo · Aplicações para Internet
+                </p>
+                <h3 class="project-name">Portfólio da Dupla</h3>
+                <p class="project-desc">
+                  Página web desenvolvida em dupla para a disciplina de
+                  Aplicações para Internet, aplicando HTML5 semântico, CSS
+                  responsivo com Flexbox e Grid, formulário validado e layout
+                  mobile-first.
+                </p>
+
+                <ul class="project-tags" role="list">
+                  <li class="project-tag">HTML5</li>
+                  <li class="project-tag">CSS3</li>
+                  <li class="project-tag">BEM</li>
+                  <li class="project-tag">Design Tokens</li>
+                  <li class="project-tag">Acessibilidade</li>
+                  <li class="project-tag">Mobile-First</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section" aria-labelledby="contato-title">
+        <div class="container">
+          <div class="section-tag section-tag--shared">04 - Fale com a gente</div>
+          <h2 class="section-title" id="contato-title">Contato</h2>
+
+          <div class="contact-grid">
+            <article class="contact-card contact-card--jeff">
+              <h3 class="contact-name">Jefferson Coqueijo Fidelis</h3>
+
+              <ul class="contact-list" role="list">
+                <li class="contact-item contact-item--jeff">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://portfolio-swart-omega-50.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Portfólio
+                  </a>
+                </li>
+                <li class="contact-item contact-item--jeff">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a href="mailto:jefferson@email.com">E-mail</a>
+                </li>
+                <li class="contact-item contact-item--jeff">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://github.com/FIDEL7Z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li class="contact-item contact-item--jeff">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://www.linkedin.com/in/jefferson-fidelis-16bb091b1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li class="contact-item contact-item--jeff">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <span>João Pessoa, PB</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="contact-card contact-card--hugo">
+              <h3 class="contact-name">Hugo Henrrique de Vieira Almeida</h3>
+
+              <ul class="contact-list" role="list">
+                <li class="contact-item contact-item--hugo">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://portfoliohugoalmeida.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Portfólio
+                  </a>
+                </li>
+                <li class="contact-item contact-item--hugo">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a href="mailto:contato.hugoalmeida@gmail.com">E-mail</a>
+                </li>
+                <li class="contact-item contact-item--hugo">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://github.com/hugoalmx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li class="contact-item contact-item--hugo">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <a
+                    href="https://www.linkedin.com/in/hugo-halmeida/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li class="contact-item contact-item--hugo">
+                  <span class="contact-dot" aria-hidden="true"></span>
+                  <span>João Pessoa, PB</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <form class="contact-form" action="#" method="POST">
+            <fieldset class="contact-form__fieldset">
+              <legend class="contact-form__legend">Envie uma mensagem</legend>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-nome">
+                  Nome completo <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="contact-nome"
+                  name="nome"
+                  required
+                  minlength="3"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  aria-describedby="nome-hint"
+                />
+                <small id="nome-hint" class="form-hint">Mínimo de 3 caracteres.</small>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">
+                  E-mail <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  required
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-telefone">Telefone</label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="contact-telefone"
+                  name="telefone"
+                  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                  placeholder="(83) 99999-9999"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  title="Informe um telefone válido no formato (DD) 99999-9999"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-mensagem">
+                  Mensagem <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  class="form-input form-textarea"
+                  id="contact-mensagem"
+                  name="mensagem"
+                  required
+                  minlength="10"
+                  rows="5"
+                  placeholder="Digite sua mensagem..."
+                  aria-describedby="mensagem-hint"
+                ></textarea>
+                <small id="mensagem-hint" class="form-hint">
+                  Mínimo de 10 caracteres.
+                </small>
+              </div>
+
+              <button type="submit" class="btn btn--primary form-btn">
+                Enviar mensagem
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <section class="footer__column" aria-labelledby="footer-projeto">
+          <h2 class="footer__title" id="footer-projeto">Projeto</h2>
+          <p>
+            Portfólio acadêmico desenvolvido para a disciplina de Aplicações
+            para Internet.
+          </p>
+        </section>
+
+        <section class="footer__column" aria-labelledby="footer-navegacao">
+          <h2 class="footer__title" id="footer-navegacao">Navegação</h2>
+          <ul class="footer__links" role="list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__column" aria-labelledby="footer-creditos">
+          <h2 class="footer__title" id="footer-creditos">Créditos</h2>
+          <p>
+            Jefferson Coqueijo Fidelis &amp; Hugo Henrrique de Vieira Almeida.
+          </p>
+          <p class="footer__note">Prof. Jeofton Costa · 2026</p>
+        </section>
       </div>
-    </section>
-
-
-    <!-- ============================================================
-         FOOTER — Créditos e informações da disciplina
-    ============================================================ -->
-    <footer>
-      <p>
-        © 2026 · <strong>Jefferson Coqueijo Fidelis</strong> &
-        <strong>Hugo Henrrique de Vieira Almeida</strong>
-      </p>
-      <p style="margin-top: 6px">
-        Disciplina de Aplicações para Internet · Prof. Jeofton Costa
-      </p>
     </footer>
 
-
-    <!-- Script carregado no final do body para não bloquear a renderização do HTML -->
     <script src="js/script.js"></script>
-
   </body>
 </html>
