@@ -31,6 +31,13 @@
   gap: var(--space-5);
 }
 
+/* Item 07 — máximo de 75 chars por linha em textos corridos */
+.profile-bio,
+.exp-desc,
+.project-desc {
+  max-width: 65ch;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--space-5);

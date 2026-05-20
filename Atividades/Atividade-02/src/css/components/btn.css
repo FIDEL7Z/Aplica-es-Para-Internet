@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-height: 2.5rem;
+  min-height: 2.75rem; /* 44px — área de toque mínima (item 03) */
   border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);

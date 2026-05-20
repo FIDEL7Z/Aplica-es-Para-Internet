@@ -11,6 +11,8 @@
   --font-size-2xl: clamp(1.6rem, 4vw, 2.2rem);
   --font-size-display: clamp(2rem, 6vw, 3.6rem);
 
+  --line-height-normal: 1.6;
+
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -21,4 +23,21 @@
   --leading-tight: 1.1;
   --leading-base: 1.6;
   --leading-loose: 1.7;
+}
+
+/* Item 02 (crítico) — mínimo de 14px em viewport estreito (≤ 480px) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-xs: 0.875rem;  /* 14px */
+    --font-size-sm: 0.9375rem; /* 15px */
+  }
+}
+
+/* Demanda 1 (Fase 3) — legibilidade em projetor / TV (≥ 1600px) */
+@media (min-width: 1600px) {
+  :root {
+    --font-size-base: 1.125rem;
+    --font-size-lg:   1.25rem;
+    --font-size-xl:   1.5rem;
+  }
 }

@@ -131,9 +131,12 @@
   transition: border-color 0.2s, transform 0.2s;
 }
 
-.exp-item:hover {
-  border-color: var(--color-border-strong);
-  transform: translateY(-1px);
+/* Item 09 — hover only for pointer devices (prevents "orphan hovers" em touch) */
+@media (hover: hover) {
+  .exp-item:hover {
+    border-color: var(--color-border-strong);
+    transform: translateY(-1px);
+  }
 }
 
 .exp-date {
@@ -170,9 +173,11 @@
   transition: border-color 0.2s, transform 0.2s;
 }
 
-.project-card:hover {
-  border-color: var(--color-border-strong);
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .project-card:hover {
+    border-color: var(--color-border-strong);
+    transform: translateY(-1px);
+  }
 }
 
 .project-card--collab {

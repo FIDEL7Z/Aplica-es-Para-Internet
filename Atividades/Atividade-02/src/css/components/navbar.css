@@ -38,7 +38,9 @@
 }
 
 .navbar__link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem; /* 44px — área de toque mínima (item 03) */
   border-radius: var(--radius-sm);
   color: var(--color-text-secondary);
   font-size: var(--font-size-md);
