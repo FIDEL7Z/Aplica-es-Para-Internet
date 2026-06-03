@@ -1,32 +1,33 @@
-# CSS � Vis�o geral
+# CSS — Visão geral
 
-Este arquivo � um �ndice para a documenta��o detalhada dos m�dulos CSS do projeto.
+Este arquivo é um índice para a documentação detalhada dos módulos CSS do projeto.
 
-## P�ginas CSS detalhadas
+## Páginas CSS detalhadas
 
-- [CSS principal](css/main.md) � ponto de entrada e ordem de importa��o das layers
-- [Tokens](css/tokens.md) � sistema de design com cores, tipografia e espa�amento
-- [Base](css/base.md) � reset do navegador e estilos globais da p�gina
-- [Tools](css/tools.md) � utilit�rios globais e skip-link
-- [Layout](css/layout.md) � estrutura de grid, containers e responsividade
-- [Componentes](css/components.md) � navbar, hero, bot�es, badges, cards, formul�rio e footer
-- [Utilit�rios](css/utilities.md) � classes de apoio e padr�es acess�veis
+- [CSS principal](css/main.md) — ponto de entrada e ordem de importação das layers
+- [Tokens](css/tokens.md) — sistema de design com cores, tipografia e espaçamento
+- [Base](css/base.md) — reset do navegador e estilos globais da página
+- [Tools](css/tools.md) — utilitários globais e skip-link
+- [Layout](css/layout.md) — estrutura de grid, containers e responsividade
+- [Componentes](css/components.md) — navbar, hero, botões, badges, cards, formulário e footer
+- [Utilitários](css/utilities.md) — classes de apoio e padrões acessíveis
 
 ## Como usar
 
-Abra cada p�gina para entender melhor:
+Abra cada página para entender melhor:
 
-- onde os estilos s�o definidos
+- onde os estilos são definidos
 - por que cada camada existe
 - como os arquivos se relacionam
-- qual parte do CSS se aplica a cada �rea da p�gina
+- qual parte do CSS se aplica a cada área da página
 
-## Benef�cios dessa divis�o
+## Benefícios dessa divisão
 
-- facilita o estudo do c�digo
+- facilita o estudo do código
 - permite focar apenas na parte relevante do design
-- deixa claro a fun��o de cada arquivo CSS
-- ajuda a organizar o trabalho em m�dulos
+- deixa claro a função de cada arquivo CSS
+- ajuda a organizar o trabalho em módulos
+
 ## Guia de perguntas
 
 Veja também: [Perguntas sobre CSS](qa/css-questions.md)
